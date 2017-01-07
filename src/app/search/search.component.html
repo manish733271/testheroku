@@ -1,0 +1,44 @@
+<div class = "container search">
+    <form>
+      <div class="form-group">
+        <button class="btn btn-primary" type="button" name=""
+        (click)="searchAssets()">
+           <strong> Search for assets </strong>
+         </button>
+      </div>
+    </form>
+</div>
+
+<div class = "container">
+    <div *ngIf = "searchRes">
+      <div *ngFor = "let assets of searchRes">
+        <!--<div *ngIf = "id">-->
+              <div class = "col-md-12 search-res">
+                        <div>
+                          <img class = "search-thumb img-thumbnail" src = "{{ assets.imageUrl }}">
+                          <!--<a routerLink = "/assets/ {{assets.assetTypeId}}"> {{ assets.metadata.title.$}} </a>-->
+                          <a routerLink = "/assets/{{ assets['@id'] }}"> {{ assets.metadata.title.$}} - {{ assets['@id'] }} </a>
+                        </div>
+                        <div>
+                          <strong>Asset category: </strong>
+                          {{ assets.categoryTitle }}
+                        </div>
+                        <div>
+                          <small><strong>Asset play uri (HLS protocol):</strong></small> 
+                          <a routerLink = "/watch/{{ assets['@id'] }}"><small>https://vimond-rest-api.ha.expo-first.vimondtv.com{{assets.playback['@uri']}}?protocol=HLS</small></a>
+                        </div>
+                </div>
+          <!--</div>-->
+       <div>
+    </div>
+  </div> 
+</div>
+
+
+
+
+
+
+
+
+

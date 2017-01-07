@@ -1,0 +1,31 @@
+<div class = "search">
+<button class="btn btn-primary" type="button" 
+    (click)="getSingleAsset()">
+    <strong> Click to update metadata for single asset </strong>
+</button>
+</div>
+
+  <div *ngIf = "searchRes">
+    <!--<div *ngFor = "let assets of searchRes | filter: filterargs">-->
+    <div *ngFor = "let assets of searchRes">
+      <div *ngIf = "assets.assetTypeName == 'epg'">
+            <form class ="form">
+              <div class="form-group">
+                <label>Title</label>
+                <input  class="form-control" placeholder="{{ assets.metadata.title.$ }}">
+              </div> 
+              <div class="form-group">
+                <label>Genre</label>
+                <input class="form-control" placeholder="{{ assets.metadata.genre.$ }}">
+              </div> 
+              <div class="form-group">
+                <label>Tags</label>
+                <input class="form-control" placeholder="{{ assets.metadata.tags.$ }}">
+              </div> 
+              <button class="btn btn-danger">Update</button>
+            </form>
+        </div>
+    </div>
+  </div>
+ 
+

@@ -1,0 +1,21 @@
+.search{
+    margin-top: 20px;
+}
+
+.search-res {
+    margin-top: 50px;
+    box-shadow: 0 0 10px gray;
+    padding:0 15px 0 15px;
+    float:left;
+}
+
+  .search-thumb{
+    width: 80px;
+    height: auto;
+    float:left;
+    margin-right: 10px;
+  }
+
+  .h5{
+      margin-top:20px;
+  }
