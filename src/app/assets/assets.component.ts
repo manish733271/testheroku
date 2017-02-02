@@ -26,7 +26,7 @@ export class AssetsComponent implements OnInit {
           this._vimondService.getAssets(id)
             .subscribe(a => {
               this.assets = a;
-              console.log(this.assets);
+              // console.log(this.assets);
             })
         });    
   }

@@ -25,7 +25,7 @@ export class WatchComponent implements OnInit {
           this._vimondService.getVideo(id)
             .subscribe(a => {
               this.playback = a;
-              console.log(this.playback);
+              // console.log(this.playback);
             })
         });    
   }

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { VimondService } from '../vimond.service';
 import { Assets } from '../assets';
-// import { ObjtoarrayPipe } from '../objtoarray.pipe';
 
 @Component({
   selector: 'app-search',
@@ -19,9 +18,8 @@ export class SearchComponent {
   searchAssets(){
     this._vimondService.searchAssets().subscribe(res =>
     {
-       console.log(res.assets.asset);
-      // console.log(res.assets.asset[0]['@id']);
       this.searchRes = res.assets.asset;
+      //console.log(res.assets.asset[0]['@id']);
     });
   }
 

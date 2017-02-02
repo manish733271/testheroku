@@ -21,7 +21,7 @@ export class SingleassetComponent {
   getSingleAsset(){
     this._vimondService.searchAssets().subscribe(res =>
     {
-      console.log(res.assets.asset);
+      // console.log(res.assets.asset);
       this.searchRes = res.assets.asset;
       
     });

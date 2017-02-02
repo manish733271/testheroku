@@ -23,7 +23,6 @@
     "@angular/platform-browser-dynamic": "2.4.2",
     "@angular/router": "3.4.2",
     "core-js": "^2.4.1",
-    "json-typescript-mapper": "^1.0.5",
     "rxjs": "5.0.3",
     "ts-helpers": "^1.1.2",
     "zone.js": "^0.7.4",
